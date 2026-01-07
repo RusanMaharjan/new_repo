@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 
-API_URL = 'https://new-repo-42yn.onrender.com/predict'
+API_URL = 'https://new-repo-uh14.onrender.com/predict'
 
 st.title('Employee Termination')
 st.subheader('Using Logistic Regression')
@@ -25,9 +25,9 @@ if st.button('Predict Termination or Active'):
         response = requests.post(API_URL, json=payload)
 
         if response.status_code == 200:
-            result = response.json
+            result = response.json()
 
-            if result["Predicted Termination"] == 1:
+            if result["Predicted_Termination"] == 1:
                 st.error("Employee is likely to be terminated.")
             else:
                 st.success("Employee is likely to remain active..")
