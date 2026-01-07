@@ -17,7 +17,7 @@ def predict(data: EmployeeTerm):
     prob = model.predict_proba(input_data)[0]
 
     return {
-        "Predicted Termination": int(prediction),
+        "Predicted_Termination": int(prediction),
         "Status": "Terminated" if prediction == 1 else "Active",
         "Probability": {
             "Active": prob[0],
