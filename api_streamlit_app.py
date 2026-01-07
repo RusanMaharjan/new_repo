@@ -4,8 +4,12 @@ import pandas as pd
 
 API_URL = 'https://new-repo-uh14.onrender.com/predict'
 
-st.title('Employee Termination')
-st.subheader('Using Logistic Regression')
+st.title('Employee Termination or Active')
+st.subheader('''
+                Employee Satisfaction (1 - 5).
+                According to Employee Satisfaction in the Company 
+                Whether Employee is Likely to be Terminated or Active. 
+             ''')
 
 
 emp_satisfaction = st.slider(
